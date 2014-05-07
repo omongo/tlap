@@ -10,22 +10,20 @@ int main()
 {
   using std::cout;
   using std::cin;
-  int odd_checksum = 0;
-  int even_checksum = 0;
-  int position = 1;
+  int odd_sum = 0, even_sum = 0, pos = 0;
   cout << "Enter a number: ";
-  for (char digit = cin.get(); digit != 10; ++position) {
+  for (char digit = cin.get(); digit != 10; ++pos) {
     digit -= '0';
-    if (position % 2 == 0) {
-      even_checksum += digit;
-      odd_checksum += double_value(digit);
+    if (pos % 2 == 0) {
+      even_sum += digit;
+      odd_sum += double_value(digit);
     } else {
-      even_checksum += double_value(digit);
-      odd_checksum += digit;
+      even_sum += double_value(digit);
+      odd_sum += digit;
     }
     digit = cin.get();
   }
-  int checksum = (position - 1) % 2 == 0 ? even_checksum : odd_checksum;
+  int checksum = (pos - 1) % 2 == 0 ? even_sum : odd_sum;
   cout << "Checksum is " << checksum << ".\n";
   if (checksum % 10 == 0)
     cout << "Checksum is divisible by 10, Valid.\n";

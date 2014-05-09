@@ -2,7 +2,6 @@
 
 int main() {
   using std::cout;
-  using std::cin;
   for (int line = 0; line < 4; ++line) {
     for (int space = line; space > 0; --space)
       cout << ' ';

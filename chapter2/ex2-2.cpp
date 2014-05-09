@@ -4,7 +4,7 @@
 int main() {
   using std::cout;
   using std::cin;
-  for (int line = -4; line <= 4; ++line) {
+  for (int line = 4; line >= 4; --line) {
     if (!line)
       continue;
     for (int space = abs(line); space > 1; --space)

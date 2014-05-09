@@ -3,8 +3,8 @@
 
 using std::cout;
 
-void print(char ch, int count) {
-  for (int i = count; i > 0; --i)
+void print(char ch, int times) {
+  for (;times > 0; --times)
     cout << ch;
 }
 
